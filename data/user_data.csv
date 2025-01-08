@@ -1,0 +1,2 @@
+first_name,last_name,address,email,phone,gender,hobbies,language,skills,country,year,month,day,password,confirm_password
+John,Doe,"123 Street Name, City, Country",johndoe@example.com,1234567890,Male,"Cricket,Movies",English,Java,India,1990,April,15,Password123,Password123

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.12.8 on win32)" generated="2024-12-23T18:57:30.931834" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Register User" source="C:\Users\Boya Manoj - 2978\Downloads\AutomationFramework\tests\test_register_user.robot">
+<test id="s1-t1" name="Test User Registration" line="7">
+<kw name="Open Registration Page" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-23T18:57:31.448075" level="INFO">Opening browser 'chrome' to base url 'https://demo.automationtesting.in/Register.html'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-23T18:57:31.448075" elapsed="24.272095"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-12-23T18:57:55.720170" elapsed="0.054866"/>
+</kw>
+<status status="PASS" start="2024-12-23T18:57:31.448075" elapsed="24.328001"/>
+</kw>
+<kw name="Fill Registration Form" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-23T18:57:55.778809" level="INFO">Typing text 'John' into text field 'xpath=//input[@placeholder='First Name']'.</msg>
+<arg>xpath=//input[@placeholder='First Name']</arg>
+<arg>${first_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-23T18:57:55.777714" elapsed="0.123738"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-23T18:57:55.901452" level="INFO">Typing text 'Doe' into text field 'xpath=//input[@placeholder='Last Name']'.</msg>
+<arg>xpath=//input[@placeholder='Last Name']</arg>
+<arg>${last_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-23T18:57:55.901452" elapsed="0.079281"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-23T18:57:55.981320" level="INFO">Typing text '123 Street Name, City, Country' into text field 'xpath=//textarea[@ng-model='Adress']'.</msg>
+<arg>xpath=//textarea[@ng-model='Adress']</arg>
+<arg>${address}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-23T18:57:55.980733" elapsed="0.137766"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-23T18:57:56.118499" level="INFO">Typing text 'johndoe@example.com' into text field 'xpath=//input[@type='email']'.</msg>
+<arg>xpath=//input[@type='email']</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-23T18:57:56.118499" elapsed="0.094008"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-23T18:57:56.212507" level="INFO">Typing text '1234567890' into text field 'xpath=//input[@type='tel']'.</msg>
+<arg>xpath=//input[@type='tel']</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-23T18:57:56.212507" elapsed="0.065247"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-23T18:57:56.277754" level="INFO">Clicking element 'xpath=//input[@value='Male']'.</msg>
+<arg>xpath=//input[@value='${gender}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-23T18:57:56.277754" elapsed="0.065195"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=//input[@value='${hobby}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-12-23T18:57:56.342949" elapsed="0.001009"/>
+</kw>
+<var name="${hobby}"/>
+<status status="NOT RUN" start="2024-12-23T18:57:56.342949" elapsed="0.001009"/>
+</iter>
+<msg time="2024-12-23T18:57:56.343958" level="FAIL">Value of variable '@{hobbies}' is not list or list-like.</msg>
+<var>${hobby}</var>
+<value>@{hobbies}</value>
+<status status="FAIL" start="2024-12-23T18:57:56.342949" elapsed="0.001009">Value of variable '@{hobbies}' is not list or list-like.</status>
+</for>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=//div[@id='msdd']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-12-23T18:57:56.343958" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=//a[text()='${language}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-12-23T18:57:56.343958" elapsed="0.000000"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<arg>xpath=//select[@id='Skills']</arg>
+<arg>${skills}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" start="2024-12-23T18:57:56.343958" elapsed="0.000000"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<arg>xpath=//select[@id='countries']</arg>
+<arg>${country}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" start="2024-12-23T18:57:56.343958" elapsed="0.000000"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<arg>xpath=//select[@id='yearbox']</arg>
+<arg>${year}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" start="2024-12-23T18:57:56.343958" elapsed="0.000000"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<arg>xpath=//select[@placeholder='Month']</arg>
+<arg>${month}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" start="2024-12-23T18:57:56.343958" elapsed="0.000000"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<arg>xpath=//select[@id='daybox']</arg>
+<arg>${day}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" start="2024-12-23T18:57:56.343958" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>xpath=//input[@id='firstpassword']</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-12-23T18:57:56.343958" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>xpath=//input[@id='secondpassword']</arg>
+<arg>${confirm_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-12-23T18:57:56.343958" elapsed="0.000000"/>
+</kw>
+<arg>${FIRST_NAME}</arg>
+<arg>${LAST_NAME}</arg>
+<arg>${ADDRESS}</arg>
+<arg>${EMAIL}</arg>
+<arg>${PHONE}</arg>
+<arg>${GENDER}</arg>
+<arg>${HOBBIES}</arg>
+<arg>${LANGUAGE}</arg>
+<arg>${SKILLS}</arg>
+<arg>${COUNTRY}</arg>
+<arg>${YEAR}</arg>
+<arg>${MONTH}</arg>
+<arg>${DAY}</arg>
+<arg>${PASSWORD}</arg>
+<arg>${CONFIRM_PASSWORD}</arg>
+<status status="FAIL" start="2024-12-23T18:57:55.776076" elapsed="0.567882">Value of variable '@{hobbies}' is not list or list-like.</status>
+</kw>
+<kw name="Submit Registration Form" owner="keywords">
+<status status="NOT RUN" start="2024-12-23T18:57:56.344984" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-12-23T18:57:56.344984" elapsed="2.143834"/>
+</kw>
+<status status="FAIL" start="2024-12-23T18:57:31.448075" elapsed="27.040743">Value of variable '@{hobbies}' is not list or list-like.</status>
+</test>
+<status status="FAIL" start="2024-12-23T18:57:30.931834" elapsed="27.556984"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Test Register User">Test Register User</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
