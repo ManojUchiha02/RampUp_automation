@@ -5,7 +5,6 @@ Library    SeleniumLibrary
 Open Registration Page
     Open Browser    ${URL}    chrome
     Maximize Browser Window
-
 Fill Registration Form
     [Arguments]    ${first_name}    ${last_name}    ${address}    ${email}    ${phone}    ${gender}    ${hobbies}    ${language}    ${skills}    ${country}    ${year}    ${month}    ${day}    ${password}    ${confirm_password}
     Input Text    xpath=//input[@placeholder='First Name']    ${first_name}
@@ -26,7 +25,15 @@ Fill Registration Form
     Select From List By Value    xpath=//select[@id='daybox']    ${day}
     Input Text    xpath=//input[@id='firstpassword']          ${password}
     Input Text    xpath=//input[@id='secondpassword']         ${confirm_password}
-
 Submit Registration Form
     Click Element  xpath=//button[@id='submitbtn']
     Sleep  2s
+Open Browser To DemoQA
+    [Arguments]    ${url}
+    Open Browser    ${url}    browser=chrome
+    Maximize Browser Window
+    Page Should Contain    ToolsQA
+Drag and Drop Example
+    Open Browser    ${DRAG_DROP_URL}    browser=chrome
+    Drag And Drop   id:box6    id:box106
+    Page Should Contain    Norway
